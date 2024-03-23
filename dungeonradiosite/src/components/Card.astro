@@ -1,61 +1,72 @@
 ---
-interface Props {
-	title: string;
-	body: string;
-	href: string;
-}
+// interface Props {
+//   title: string;
+//   body: string;
+//   href: string;
+// }
+import cover from "../assets/samplecover.png";
 
 const { href, title, body } = Astro.props;
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
+<div class="card flex justify-center">
+  <span class="w-4/12 h-auto pt-[48px] card-cover ml-12 ">
+    <img src={cover.src} class="card-cover " />
+  </span>
+  <span class="flex flex-col w-6/12 pt-[48px] pl-16 pr-16">
+    <div class="card-date flex justify-between">
+      <p>Dungeon Radio Magazine</p>
+      <p>31.05.23</p>
+    </div>
+
+    <article class="card-info pt-[28px]">
+      Quartas trabalha pensamentos, imagens, ritmos, expressões e significados em torno de seu título A primeira sensação que temos ao ouvir o EP é a de que, nele, Saskia deixa ressaltar um lado mais
+      melódico, ainda que as músicas ganhem densas camadas de produção
+    </article>
+    
+    <a>Read more</a>
+  </span>
+</div>
+
 <style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
+  .card {
+    width: 1177px;
+    height: 686px;
+
+    gap: 0px;
+    border-radius: 55px;
+    background-color: #949491;
+  }
+
+  .card-date {
+    font-size: 18.59px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.800000011920929px;
+    text-align: left;
+  }
+
+  .card-info {
+    font-size: 19.38px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.47999998927116394px;
+    text-align: left;
+  }
+
+  .card-cover {
+    width: 546px;
+    height: 568px;
+    border-radius: 22px;
+  }
+
+  .cover {
+    width: 546px;
+    height: 568px;
+    top: 862px;
+    left: 83px;
+    gap: 0px;
+    border-radius: 22px 0px 0px 0px;
+    opacity: 0px;
+  }
 </style>

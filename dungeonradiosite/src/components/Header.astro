@@ -1,0 +1,22 @@
+---
+import headerimage from "../assets/wordart.png";
+import { Image } from "astro:assets";
+import Button from "./Button.astro";
+---
+
+<span class="flex w-full justify-around pt-8">
+  <a class="button" href="/">HOME</a>
+  <a class="button" href="/work">WORK</a>
+  <a class="button" href="/contact">MORE</a>
+</span>
+
+<style>
+  .button {
+    font-family: Helvetica, sans-serif;
+    font-size: 74px;
+    font-weight: 400;
+    line-height: 74px;
+    text-align: left;
+    color: #c9c9c9;
+  }
+</style>
