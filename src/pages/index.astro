@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import logo from "../assets/dungeon-logo.png";
+
+import Button from "../components/Button.astro";
+import Header from "../components/Header.astro";
+import Player from "../components/Player.astro";
+---
+
+<Layout title="dungeonradioclub">
+  <div class="logo"></div>
+
+  <div class="background">
+    <Header />
+
+    <span class="flex items-center w-full justify-center bottom-0 absolute">
+      <img src={logo.src} width="50%" />
+    </span>
+
+
+  </div>
+</Layout>
+
+<style>
+  .background {
+    margin-top: 0;
+    padding: 0;
+    z-index: -1;
+    height: 100vh;
+    background-image: url("../assets/pictures/WhatsApp Image 2023-12-10 at 22.23.22.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .logo {
+    background-image: url("../assets/dungeon-logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .info {
+    font-family: "Bungee Shade", sans-serif;
+    font-family: "Source Code Pro", monospace;
+  }
+</style>

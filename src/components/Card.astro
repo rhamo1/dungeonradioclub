@@ -1,0 +1,72 @@
+---
+// interface Props {
+//   title: string;
+//   body: string;
+//   href: string;
+// }
+import { Image } from "astro:assets";
+import cover from "../assets/samplecover.png";
+
+const { src, body } = Astro.props;
+---
+
+<div class="card flex justify-center">
+  <span class="w-4/12 h-auto pt-[48px] card-cover ml-12 ">
+    <Image src={src} alt="abc" class="card-cover " />
+  </span>
+  <span class="flex flex-col w-6/12 pt-[48px] pl-16 pr-16">
+    <div class="card-date flex justify-between">
+      <p>Dungeon Radio Magazine</p>
+      <p>31.05.23</p>
+    </div>
+
+    <article class="card-info pt-[28px]">
+        {body}
+    </article>
+    
+    <a>Read more</a>
+  </span>
+</div>
+
+<style>
+  .card {
+    width: 1177px;
+    height: 686px;
+
+    gap: 0px;
+    border-radius: 55px;
+    background-color: #949491;
+  }
+
+  .card-date {
+    font-size: 18.59px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.800000011920929px;
+    text-align: left;
+  }
+
+  .card-info {
+    font-size: 19.38px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.47999998927116394px;
+    text-align: left;
+  }
+
+  .card-cover {
+    width: 546px;
+    height: 568px;
+    border-radius: 22px;
+  }
+
+  .cover {
+    width: 546px;
+    height: 568px;
+    top: 862px;
+    left: 83px;
+    gap: 0px;
+    border-radius: 22px 0px 0px 0px;
+    opacity: 0px;
+  }
+</style>
