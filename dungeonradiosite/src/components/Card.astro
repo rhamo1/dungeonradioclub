@@ -4,14 +4,15 @@
 //   body: string;
 //   href: string;
 // }
+import { Image } from "astro:assets";
 import cover from "../assets/samplecover.png";
 
-const { href, title, body } = Astro.props;
+const { src, body } = Astro.props;
 ---
 
 <div class="card flex justify-center">
   <span class="w-4/12 h-auto pt-[48px] card-cover ml-12 ">
-    <img src={cover.src} class="card-cover " />
+    <Image src={src} alt="abc" class="card-cover " />
   </span>
   <span class="flex flex-col w-6/12 pt-[48px] pl-16 pr-16">
     <div class="card-date flex justify-between">
@@ -20,8 +21,7 @@ const { href, title, body } = Astro.props;
     </div>
 
     <article class="card-info pt-[28px]">
-      Quartas trabalha pensamentos, imagens, ritmos, expressões e significados em torno de seu título A primeira sensação que temos ao ouvir o EP é a de que, nele, Saskia deixa ressaltar um lado mais
-      melódico, ainda que as músicas ganhem densas camadas de produção
+        {body}
     </article>
     
     <a>Read more</a>
